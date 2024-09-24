@@ -1,0 +1,410 @@
+/* Reset básico para margens, padding e box-sizing */
+* {
+    margin: 0;
+    /* Remove a margem padrão */
+    padding: 0;
+    /* Remove o padding padrão */
+    box-sizing: border-box;
+    /* Inclui padding e borda no cálculo da largura e altura */
+}
+
+/* Estilos gerais para o body (centralização e fundo preto) */
+body {
+    margin: 0;
+    /* Remove a margem padrão */
+    height: 100vh;
+    /* Altura 100% da tela */
+    display: flex;
+    /* Usando flexbox para layout */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    background-color: black;
+    /* Cor de fundo simula o espaço */
+    overflow: hidden;
+    /* Esconde barras de rolagem */
+    position: relative;
+    /* Posição relativa para elementos filhos */
+}
+
+/* Container principal do sistema solar */
+.container {
+    font-size: 10px;
+    /* Tamanho da fonte em referência */
+    width: 40em;
+    /* Largura do container */
+    height: 40em;
+    /* Altura do container */
+    position: relative;
+    /* Necessária para posicionamentos absolutos de filhos */
+}
+
+.container::before {
+    content: '';
+    /* Necessário para gerar um elemento pseudo */
+    position: absolute;
+    /* Permite posicionar em relação ao container */
+    width: 4px;
+    /* Largura da estrela */
+    height: 4px;
+    /* Altura da estrela */
+    background: white;
+    /* Cor de fundo da estrela */
+    border-radius: 50%;
+    /* Torna a estrela redonda */
+    box-shadow:
+        /* Cria estrelas com diferentes posições e cores */
+        5vw 5vh 4px white,
+        10vw 5vh 6px white,
+        15vw 10vh 8px #FFD700,
+        20vw 15vh 5px white,
+        25vw 20vh 7px #FF4500,
+        30vw 25vh 9px white,
+        35vw 30vh 4px #00FFFF,
+        40vw 35vh 6px white,
+        45vw 40vh 4px #ADFF2F,
+        50vw 45vh 8px white,
+        55vw 50vh 7px white,
+        60vw 55vh 5px #FF69B4,
+        65vw 60vh 6px white,
+        70vw 65vh 4px #BA55D3,
+        75vw 70vh 9px white,
+        80vw 75vh 6px white,
+        85vw 80vh 4px #FF00FF,
+        90vw 85vh 7px #FFD700,
+        95vw 90vh 9px #FF4500,
+        15vw 85vh 6px white,
+        35vw 75vh 4px #00FF7F,
+        5vw 45vh 7px #FF69B4,
+        85vw 20vh 8px white,
+        45vw 35vh 4px #BA55D3,
+        75vw 10vh 6px white,
+        65vw 25vh 4px #FF00FF,
+        5vw 5vh 5px white,
+        12vw 22vh 4px #FFD700,
+        17vw 30vh 6px #FF4500,
+        21vw 40vh 8px #00FFFF,
+        37vw 18vh 3px #ADFF2F,
+        50vw 5vh 6px white,
+        60vw 10vh 9px white,
+        70vw 2vh 4px #FF69B4,
+        80vw 32vh 5px white,
+        25vw 35vh 6px #BA55D3,
+        40vw 25vh 7px #00FF7F,
+        10vw 45vh 4px #FF00FF,
+        55vw 50vh 5px white,
+        33vw 40vh 9px #FFD700,
+        12vw 10vh 3px white,
+        25vw 5vh 6px white,
+        30vw 15vh 6px white,
+        35vw 25vh 9px #FFD700,
+        40vw 35vh 4px #FF4500,
+        45vw 45vh 5px white,
+        50vw 55vh 9px white,
+        55vw 65vh 4px #00FFFF,
+        60vw 75vh 6px white,
+        65vw 85vh 4px #ADFF2F,
+        70vw 95vh 9px white,
+        75vw 10vh 6px white,
+        80vw 20vh 4px #FF69B4,
+        85vw 30vh 6px white,
+        90vw 40vh 3px #BA55D3,
+        95vw 50vh 9px white,
+        10vw 60vh 5px white,
+        15vw 70vh 4px #FF00FF,
+        20vw 80vh 5px #FFD700,
+        25vw 90vh 9px #FF4500,
+        30vw 85vh 4px #00FF7F,
+        5vw 95vh 6px white,
+        95vw 10vh 8px white,
+        40vw 5vh 4px #FF4500,
+        55vw 90vh 7px white,
+        35vw 70vh 9px white,
+        65vw 95vh 5px #00FFFF,
+        3vw 4vh 2px white,
+        7vw 8vh 3px #FF4500,
+        11vw 12vh 4px #FFD700,
+        15vw 16vh 5px white,
+        18vw 22vh 6px #FF69B4,
+        22vw 28vh 2px white,
+        26vw 32vh 4px #00FFFF,
+        30vw 38vh 5px #FF00FF,
+        34vw 42vh 3px white,
+        38vw 48vh 6px #BA55D3,
+        42vw 52vh 2px white,
+        46vw 56vh 4px #ADFF2F,
+        50vw 60vh 6px white,
+        54vw 64vh 3px #FF4500,
+        58vw 68vh 5px white,
+        62vw 72vh 6px #FFD700,
+        66vw 76vh 2px white,
+        70vw 80vh 4px #FF69B4,
+        74vw 84vh 6px white,
+        78vw 88vh 5px #FF00FF,
+        82vw 92vh 2px white,
+        86vw 96vh 6px #BA55D3,
+        90vw 10vh 4px white,
+        94vw 14vh 5px #ADFF2F,
+        98vw 18vh 7px white,
+        4vw 22vh 6px #FFD700,
+        12vw 26vh 5px white,
+        20vw 30vh 4px #FF00FF,
+        28vw 34vh 6px white,
+        36vw 38vh 5px #FF4500,
+        44vw 42vh 2px white,
+        52vw 46vh 4px #00FFFF,
+        60vw 50vh 5px white,
+        68vw 54vh 6px #FF69B4,
+        76vw 58vh 4px white,
+        84vw 62vh 7px #FFD700,
+        92vw 66vh 5px white,
+        6vw 70vh 2px #FF00FF,
+        14vw 74vh 6px white,
+        22vw 78vh 5px #BA55D3,
+        30vw 82vh 2px white,
+        38vw 86vh 4px #ADFF2F,
+        46vw 90vh 6px white,
+        54vw 94vh 5px #FFD700,
+        62vw 98vh 2px white,
+        70vw 10vh 6px #FF4500,
+        78vw 15vh 4px white,
+        86vw 20vh 5px #FF69B4,
+        94vw 25vh 6px white;
+    z-index: -1;
+    /* Coloca o elemento atrás de outros */
+}
+
+/* Representação do Sol */
+.sun {
+    position: absolute;
+    /* Posiciona o Sol em relação ao seu elemento pai */
+    top: 15em;
+    /* Distância do topo */
+    left: 15em;
+    /* Distância da esquerda */
+    width: 10em;
+    /* Largura do Sol */
+    height: 10em;
+    /* Altura do Sol */
+    background: radial-gradient(circle, #FFD700 0%, #FFA500 60%, #FF4500 100%);
+    /* Gradiente radial para o efeito do Sol */
+    border-radius: 50%;
+    /* Torna o Sol redondo */
+    box-shadow: 0 0 3em rgba(255, 215, 0, 0.8);
+    /* Sombra suave ao redor do Sol */
+}
+
+/* Estilo da órbita de Marte */
+.orbit-mars {
+    width: 500px;
+    /* Largura da órbita */
+    height: 500px;
+    /* Altura da órbita */
+    border-radius: 50%;
+    /* Forma circular da órbita */
+    position: absolute;
+    /* Posiciona em relação ao elemento pai */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    margin-top: -250px;
+    /* Ajusta a posição para centralização */
+    margin-left: -250px;
+    /* Ajusta a posição para centralização */
+    animation: rotate-mars 30s linear infinite;
+    /* Animação da órbita */
+}
+
+/* Estilo do planeta Marte */
+.planet.mars {
+    width: 30px;
+    /* Largura do planeta Marte */
+    height: 30px;
+    /* Altura do planeta Marte */
+    background: radial-gradient(circle at 20% 20%, #c1440e 0%, #7a4b2a 60%);
+    /* Gradiente radial para Marte */
+    border-radius: 50%;
+    /* Torna Marte redondo */
+    position: absolute;
+    /* Posiciona em relação à órbita */
+    top: 0;
+    /* Inicia no topo da órbita */
+    left: 50%;
+    /* Centraliza horizontalmente na órbita */
+    margin-left: -15px;
+    /* Ajusta para centralizar o planeta */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra ao redor de Marte */
+}
+
+/* Animação da órbita de Marte */
+@keyframes rotate-mars {
+    from {
+        transform: rotate(0deg);
+        /* Início da rotação */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Final da rotação */
+    }
+}
+
+/* Cometa */
+.comet {
+    width: 15px;
+    /* Largura do cometa */
+    height: 6px;
+    /* Altura do cometa */
+    background: radial-gradient(circle at 40% 40%, #fff 0%, #f0f0f0 40%, #888 80%, transparent 100%);
+    /* Gradiente radial para o cometa */
+    border-radius: 100%;
+    /* Forma oval do cometa */
+    position: absolute;
+    /* Posiciona em relação ao seu elemento pai */
+    top: 0;
+    /* Inicia no topo */
+    left: 0;
+    /* Inicia na esquerda */
+    animation: comet-move 8s linear infinite;
+    /* Animação do movimento do cometa */
+}
+
+/* Animação de movimento do cometa */
+@keyframes comet-move {
+    0% {
+        top: 100px;
+        left: -50px;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* Órbitas da Terra e da Lua, ambos circulares */
+.earth,
+.moon {
+    position: absolute;
+    /* Posiciona em relação ao elemento pai */
+    border-style: solid;
+    /* Define estilo da borda da órbita */
+    /* Estilo da órbita */
+    border-width: 0.1em 0.1em 0 0;
+    /* Define a largura da borda */
+    border-radius: 50%;
+    /* Forma circular para as órbitas */
+}
+
+/* Terra orbitando o Sol */
+.earth {
+    top: 5em;
+    /* Distância do topo */
+    left: 5em;
+    /* Distância da esquerda */
+    width: 30em;
+    /* Largura da órbita da Terra */
+    height: 30em;
+    /* Altura da órbita da Terra */
+    animation: rotate-earth 15s linear infinite;
+    /* Animação de rotação */
+}
+
+@keyframes rotate-earth {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Lua orbitando a Terra */
+.moon {
+    top: 0;
+    /* Início na parte superior da órbita */
+    right: 0;
+    /* Início na parte direita da órbita */
+    width: 8em;
+    /* Largura da órbita da Lua */
+    height: 8em;
+    /* Altura da órbita da Lua */
+    animation: rotate-earth 5s linear infinite;
+    /* Animação de rotação mais rápida */
+}
+
+/* Estilos internos para Terra e Lua (ambos circulares) */
+.earth::before,
+.moon::before {
+    content: '';
+    /* Necessário para criar o conteúdo pseudo */
+    position: absolute;
+    /* Posiciona em relação ao elemento pai */
+    border-radius: 50%;
+    /* Formato circular */
+}
+
+/* Representação visual da Terra */
+.earth::before {
+    content: '';
+    /* Necessário para criar o conteúdo pseudo */
+    position: absolute;
+    /* Posiciona em relação à órbita da Terra */
+    top: 2.8em;
+    /* Distância do topo da órbita */
+    right: 2.8em;
+    /* Distância da borda direita da órbita */
+    width: 3em;
+    /* Largura do planeta Terra */
+    height: 3em;
+    /* Altura do planeta Terra */
+    border-radius: 50%;
+    /* Torna a Terra redonda */
+    background: #00aaff;
+    /* Cor de fundo da Terra */
+    background-image: radial-gradient(circle at 20% 30%, #00aaff 0%, #0044cc 60%),
+        radial-gradient(circle at 50% 40%, #0077ff 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, #0055ff 0%, transparent 40%),
+        radial-gradient(circle at 30% 80%, #0044cc 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, #0033cc 0%, transparent 40%);
+    /* Gradientes para criar textura da Terra */
+    background-blend-mode: multiply;
+    /* Combina os gradientes */
+}
+
+/* Representação visual da Lua */
+.moon::before {
+    content: '';
+    /* Necessário para criar o conteúdo pseudo */
+    position: absolute;
+    /* Posiciona em relação à órbita da Lua */
+    top: 0.8em;
+    /* Distância do topo da órbita */
+    right: 0.2em;
+    /* Distância da borda direita da órbita */
+    width: 1.2em;
+    /* Largura da Lua */
+    height: 1.2em;
+    /* Altura da Lua */
+    border-radius: 50%;
+    /* Torna a Lua redonda */
+    background: radial-gradient(circle, #dcdcdc 0%, #b0b0b0 60%, #808080 100%);
+    /* Gradiente para a superfície da Lua */
+}
+
+/* Animação de rotação usada pela Terra e Lua */
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+        /* Rotação completa em torno do próprio eixo */
+    }
+}
